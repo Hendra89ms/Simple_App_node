@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Note App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body onload="checkLocalStorage()">
+    <main class="container">
+      <!-- Form Input note -->
+      <form class="form_note" onsubmit="handleSubmit(event)">
+        <label for="note"> Masukan Note </label>
+        <textarea name="note" id="note" cols="30" rows="10"></textarea>
+        <button type="submit" id="btn">tambah catatan</button>
+      </form>
+      <!-- End form input note -->
+
+      <!-- Card Container -->
+
+      <section class="card_container" id="card_container">
+        <div class="card">
+          <!-- <p class="card_content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
+            praesentium fuga unde, aspernatur fugiat rem fugit dignissimos
+            commodi asperiores qui soluta molestias ullam incidunt
+            reprehenderit, alias temporibus molestiae. Amet, laudantium.
+          </p>
+          <small class="card_date"> 13/07/2022 16:00 </small>
+          <button class="card_btn">
+            <i class="material-icons">delete</i>
+          </button>
+        </div> -->
+        <!-- Data dirender di Java script -->
+      </section>
+      <!-- End Card Container -->
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
