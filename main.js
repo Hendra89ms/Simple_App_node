@@ -68,10 +68,26 @@ function renderData() {
             ${item.notes}
           </p>
           <small class="card_date"> ${item.date} </small>
-          <button class="card_btn">
+          <button class="card_btn" onclick="deleteData(${item.id})">
             <i class="material-icons">delete</i>
           </button>
         </div>
     `;
   });
+}
+
+function deleteData(id) {
+  // Tangkap data note
+  let _note = localStorage.getItem("_note");
+  _note = JSON.parse(_note);
+
+  // filter data tanpa id yang dituju
+  let newData = _note.filter((e) => {
+    return e.id !== id;
+  });
+
+  // kita tiban data lama dengan hasil filter tanpa data dengan id yang ingin didelete
+  localStorage.setItem("_note", JSON.stringify(newData));
+
+  window.location.reload();
 }
